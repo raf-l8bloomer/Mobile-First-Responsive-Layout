@@ -1,0 +1,46 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Inter-Regular', sans-serif;
+    src: url('fonts/WorkSans-Regular.woff') format('woff');
+}
+
+body {
+    max-width: 1000px;
+    padding: 0;
+}
+
+h1, h2, p {
+    font-family: 'Inter-Regular', sans-serif;
+    text-align: center;
+
+}
+
+h2 {
+    text-transform: uppercase;
+
+}
+
+nav li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: orange;
+}
+
+
+.header-wrapper {
+    background-color: grey;
+    margin: 0;
+}
+
+
