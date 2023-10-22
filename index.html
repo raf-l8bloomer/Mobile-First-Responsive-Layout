@@ -17,66 +17,85 @@
         <header>
             <h1 id="home">Student Name</h1>
             <nav>
-                <ul>
-                    <li>
+                <div class="nav-container">
+                    <div>
                         <h2><a href="#home">Home</a></h2>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <h2><a href="#portfolio">Portfolio</a></h2>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <h2><a href="#contact">Contact</a></h2>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <h2><a href="#skills">Skills</a></h2>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </nav>
         </header>
-        <img src="images/responsive-layout-profile.png" alt="profile-picture" id="profile-picture">
-        <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end
-            web
-            development at Treehouse and am excited to put all my skills to use!</p>
+        <div class="persona-container">
+            <img src="images/responsive-layout-profile.png" alt="profile-picture" id="profile-picture">
+            <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in
+                front-end
+                web
+                development at Treehouse and am excited to put all my skills to use!</p>
+        </div>
     </section>
     <section class="portfolio-wrapper" id="portfolio">
         <h2>Portfolio</h2>
+        <div class="project-container">
+            <div class="project">
+                <img src="images/portfolio-1.png" alt="sample image of 'Marketing Page' project">
+                <h3>Marketing Page</h3>
+                <p>This project shows the front page of a marketing website meant for a specific business I'm interested
+                    in.
+                </p>
+            </div>
+            <div class="project">
+                <img src="images/portfolio-2.png" alt="sample image of 'Search Page' project">
+                <h3>Search Page</h3>
+                <p>This project shows the front page of a marketing website meant for a specific business I'm interested
+                    in.
+                </p>
+            </div>
+            <div class="project">
+                <img src="images/portfolio-3.png" alt="sample image of 'Travel Page' project">
+                <h3>Travel Page</h3>
+                <p>This project shows the front page of a marketing website meant for a specific business I'm interested
+                    in.
+                </p>
+            </div>
+            <div class="project">
+                <img src="images/portfolio-4.png" alt="sample image of 'Map of Favorite Spots' project">
+                <h3>Map of Favorite Spots</h3>
+                <p>This project shows the front page of a marketing website meant for a specific business I'm interested
+                    in.
+                </p>
+            </div>
+            <div class="project">
+                <img src="images/portfolio-5.png" alt="sample image of 'Photo Gallery' project">
+                <h3>Photo Gallery</h3>
+                <p>This project shows the front page of a marketing website meant for a specific business I'm interested
+                    in.
+                </p>
+            </div>
+            <div class="project">
+                <img src="images/portfolio-6.png" alt="sample image of 'Calculator' project">
+                <h3>Calculator</h3>
+                <p>This project shows the front page of a marketing website meant for a specific business I'm interested
+                    in.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-wrapper">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
 
-        <div class="project">
-            <img src="images/portfolio-1.png" alt="sample image of 'Marketing Page' project">
-            <h3>Marketing Page</h3>
-            <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.
-            </p>
-        </div>
-        <div class="project">
-            <img src="images/portfolio-2.png" alt="sample image of 'Search Page' project">
-            <h3>Search Page</h3>
-            <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.
-            </p>
-        </div>
-        <div class="project">
-            <img src="images/portfolio-3.png" alt="sample image of 'Travel Page' project">
-            <h3>Travel Page</h3>
-            <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.
-            </p>
-        </div>
-        <div class="project">
-            <img src="images/portfolio-4.png" alt="sample image of 'Map of Favorite Spots' project">
-            <h3>Map of Favorite Spots</h3>
-            <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.
-            </p>
-        </div>
-        <div class="project">
-            <img src="images/portfolio-5.png" alt="sample image of 'Photo Gallery' project">
-            <h3>Photo Gallery</h3>
-            <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.
-            </p>
-        </div>
-        <div class="project">
-            <img src="images/portfolio-6.png" alt="sample image of 'Calculator' project">
-            <h3>Calculator</h3>
-            <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.
-            </p>
-        </div>
     </section>
     <section class="footer-wrapper" id="contact">
         <div class="contact-wrapper">
@@ -92,9 +111,13 @@
                 </span>
             </div>
         </div>
-        <footer>
+        <footer class="footer-container">
             <h4 id="footer-name">Student name</h4>
             <h4 id="back-to-top"> <a href="#home">Back to top</a></h4>
+            <h4 class="footer-nav"><a href="#home">Home</a></h4>
+            <h4 class="footer-nav"><a href="#portfolio">Portfolio</a></h4>
+            <h4 class="footer-nav"><a href="#skills">Skills</a></h4>
+
         </footer>
     </section>
 

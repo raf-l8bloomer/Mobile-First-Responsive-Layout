@@ -1,7 +1,9 @@
+/* -------------------------  */
 /* ----- BASE STYLES ----- */
+/* -------------------------  */
 
 body {
-    max-width: 1000px;
+    max-width: 100%;
     padding: 0;
     font-size: 16px;
 }
@@ -15,7 +17,10 @@ body {
 }
 
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Oswald', sans-serif;
     text-align: center;
     color: #4A4A4A;
@@ -36,7 +41,7 @@ h3 {
     font-size: 1.1em;
 }
 
-h4{
+h4 {
 
     font-size: 1em;
 }
@@ -52,7 +57,7 @@ a {
     color: black;
 }
 
-a:visited{
+a:visited {
     color: orange;
 }
 
@@ -63,7 +68,7 @@ strong {
 /* ELEMENTS */
 
 section {
-    padding: 3em 0;
+    padding: 1.5em 0;
 }
 
 img {
@@ -77,22 +82,22 @@ img {
 
 }
 
-/* ----- NAVIGATION ----- */
+/* ----- HEADER/NAVIGATION ----- */
 
 .header-wrapper {
-    background-color:#FAFAFA;
+    background-color: #FAFAFA;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
+.nav-container {
+    display: flex;
+    flex-direction: column;
 }
 
-nav li {
-    padding: 1px 0;
-    margin: 5px 5%;
+
+
+.nav-container > div {
+    padding: 0.3em 0;
+    margin: 0.5em 1em;
     border: 1px solid orange;
     border-radius: 10px;
     background-color: white;
@@ -108,13 +113,13 @@ nav h2 {
 
 
 #profile-picture {
-    margin: 4em auto;
+    margin: 3em auto;
     padding: 0;
-    width: 60%;
+    width: 80%;
 
 }
 
-.header-wrapper p{
+.header-wrapper p {
     color: darkgrey;
 }
 
@@ -122,6 +127,26 @@ nav h2 {
 
 .project {
     padding: 1em 0;
+    margin: 1em;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+}
+/* ----- SKILLS----- */
+
+#skills {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 1em;
+}
+
+#skills h2 {
+    margin-top: 0;
+}
+#skills li {
+    font-family: 'Inter';
 }
 
 /* ----- CONTACT / FOOTER ----- */
@@ -130,12 +155,17 @@ footer {
     border-top: 1px solid black;
 }
 
-.contact-wrapper{
+.contact-wrapper {
     padding: 1em 0;
 }
 
-.contact-wrapper p{
+.contact-wrapper p {
     color: darkgray;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 #contact {
@@ -145,16 +175,91 @@ footer {
 #contact-info {
     font-family: 'Inter-Regular', sans-serif;
     text-align: center;
-    padding: 1em 0; 
+    padding: 1em 0;
     line-height: 2em;
     color: darkgray;
 }
 
-#footer-name {
-    float: left;
-}
 
 #back-to-top {
-    float: right;
     text-transform: uppercase;
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 0.2em 0.5em;
+}
+
+#back-to-top:hover {
+    background-color: papayawhip;
+}
+
+.footer-nav {
+    display: none;
+    overflow: hidden;
+}
+
+/* -------------------------  */
+/* ----- TABLET STYLES ----- */
+/* -------------------------  */
+
+@media (min-width: 768px) {
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav-container > div {
+        padding: 0 1em;
+    }
+
+    .persona-container{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .persona-container p{
+        margin: auto 1em;
+        text-align: left;
+    }
+
+    .project-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .project {
+        width: 48%;
+        margin: 0 0.5% ;
+    }
+
+    #contact-info {
+        padding: 2em 4em;
+    }
+
+    .skills-wrapper{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .footer-nav {
+        display: inline;   
+    }
+
+    .footer-nav a {
+        text-transform: uppercase;
+    }
+}
+
+/* -------------------------  */
+/* ----- DESKTOP STYLES ----- */
+/* -------------------------  */
+
+@media (min-width: 1024px) {
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: right;
+    }
 }
