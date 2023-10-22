@@ -10,9 +10,9 @@ body {
 
 /* FONTS */
 @font-face {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter';
     src: url('Inter-Regular.woff') format('woff');
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald';
     src: url('fonts/Oswald-Medium.woff') format('woff');
 }
 
@@ -88,20 +88,20 @@ img {
     background-color: #FAFAFA;
 }
 
-.nav-container {
+header, .nav-container {
     display: flex;
     flex-direction: column;
 }
 
-.nav-container > div {
-    padding: 0.3em 0;
+.nav-container > h2 {
+    padding: 0.8em 0;
     margin: 0.5em 1em;
     border: 1px solid orange;
     border-radius: 10px;
     background-color: white;
 }
 
-nav li:hover {
+nav h2:hover {
     background-color: papayawhip;
 }
 
@@ -123,15 +123,13 @@ nav h2 {
 
 /* ----- PORFOLIO SECTION ----- */
 
+
 .project {
     padding: 1em 0;
     margin: 1em;
 }
 
-.project-container {
-    display: flex;
-    flex-direction: column;
-}
+
 /* ----- SKILLS----- */
 
 #skills {
@@ -166,6 +164,10 @@ footer {
     justify-content: space-around;
 }
 
+#footer-name{
+    align-items: flex-start;
+}
+
 #contact {
     background-color: #FAFAFA;
 }
@@ -184,6 +186,7 @@ footer {
     border: 1px solid orange;
     border-radius: 10px;
     padding: 0.2em 0.5em;
+    align-items: flex-end;
 }
 
 #back-to-top:hover {
@@ -204,42 +207,35 @@ footer {
     .nav-container {
         flex-direction: row;
         justify-content: center;
-
-
     }
 
-    .nav-container > div {
-        padding: 0 1em;
-        margin: auto;
+    .nav-container > h2 {
+        padding: 1em;
 
     }
     
-    #home{
-        order: -1;
-  
-    }
-
     .persona-container{
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-start;
+
     }
 
     .persona-container p {
         margin: auto 1em;
         text-align: left;
+
     }
 
-    .project-container {
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    .project {
-        width: 48%;
-        margin: 0 0.5% ;
-    }
+.project{
+ flex: 1 46%;
+}
+
 
     #contact-info {
         padding: 2em 4em;
@@ -274,21 +270,27 @@ footer {
         margin: 2%;
     }
 
-    .nav-container {
+    header {
         flex-direction: row;
         justify-content: flex-end;
     }
 
     #home {
-        margin-right: auto;
-
+       justify-content: flex-start;
+       margin-right: auto;
     }
 
-    .nav-container > div {
+    .nav-container {
+        justify-content: flex-end;
+    }
+
+    .nav-container h2{
         margin: auto 1em;
-        padding: auto;
+        padding: 1em;
     }
 
-
+.project {
+    flex-basis: 30%;
+}
 
 }
