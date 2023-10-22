@@ -93,8 +93,6 @@ img {
     flex-direction: column;
 }
 
-
-
 .nav-container > div {
     padding: 0.3em 0;
     margin: 0.5em 1em;
@@ -206,18 +204,28 @@ footer {
     .nav-container {
         flex-direction: row;
         justify-content: center;
+
+
     }
 
     .nav-container > div {
         padding: 0 1em;
+        margin: auto;
+
+    }
+    
+    #home{
+        order: -1;
+  
     }
 
     .persona-container{
         display: flex;
         flex-direction: row-reverse;
+        align-items: flex-start;
     }
 
-    .persona-container p{
+    .persona-container p {
         margin: auto 1em;
         text-align: left;
     }
@@ -243,6 +251,10 @@ footer {
         flex-direction: row;
     }
 
+    #back-to-top {
+        display: none;
+    }
+
     .footer-nav {
         display: inline;   
     }
@@ -258,8 +270,25 @@ footer {
 
 @media (min-width: 1024px) {
 
+    header, .persona-container{
+        margin: 2%;
+    }
+
     .nav-container {
         flex-direction: row;
-        justify-content: right;
+        justify-content: flex-end;
     }
+
+    #home {
+        margin-right: auto;
+
+    }
+
+    .nav-container > div {
+        margin: auto 1em;
+        padding: auto;
+    }
+
+
+
 }
