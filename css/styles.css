@@ -1,9 +1,4 @@
-/* FONTS */
-
-@font-face {
-    font-family: 'Inter-Regular', sans-serif;
-    src: url('fonts/WorkSans-Regular.woff') format('woff');
-}
+/* ----- BASE STYLES ----- */
 
 body {
     max-width: 1000px;
@@ -11,39 +6,45 @@ body {
     font-size: 16px;
 }
 
-h1, h2, h3, p {
-    font-family: 'Inter-Regular', sans-serif;
+/* FONTS */
+@font-face {
+    font-family: 'Inter', sans-serif;
+    src: url('Inter-Regular.woff') format('woff');
+    font-family: 'Oswald', sans-serif;
+    src: url('fonts/Oswald-Medium.woff') format('woff');
+}
+
+
+h1, h2, h3, h4 {
+    font-family: 'Oswald', sans-serif;
     text-align: center;
     color: #4A4A4A;
 
 }
 
+h1 {
+    font-size: 2em;
+}
+
 h2 {
     text-transform: uppercase;
+    font-size: 1.3em;
+}
 
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1em;
+}
+
+h4{
+
+    font-size: 1em;
 }
 
 p {
-    margin: auto 1em;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-}
-
-nav li {
-
-    padding: 1px 0;
-    margin: 5px 0;
-    border: 1px solid black;
-    background-color: white;
-}
-
-nav h2 {
-    line-height: 0;
+    font-family: 'Inter', sans-serif;
+    margin: 0 2em;
+    text-align: center;
 }
 
 a {
@@ -55,27 +56,105 @@ a:visited{
     color: orange;
 }
 
+strong {
+    font-family: 'Oswald';
+}
+
+/* ELEMENTS */
+
+section {
+    padding: 3em 0;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+/* ----- NAVIGATION ----- */
 
 .header-wrapper {
     background-color:#FAFAFA;
 }
 
-section {
-    padding: 1rem 0;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
 }
 
-img {
-    display: block;
-    margin: auto;
-    padding: 1em 0;;
-    width: 100%;
+nav li {
+    padding: 1px 0;
+    margin: 5px 5%;
+    border: 1px solid orange;
+    border-radius: 10px;
+    background-color: white;
 }
+
+nav li:hover {
+    background-color: papayawhip;
+}
+
+nav h2 {
+    line-height: 0;
+}
+
 
 #profile-picture {
-    width: 60%
+    margin: 4em auto;
+    padding: 0;
+    width: 60%;
+
 }
+
+.header-wrapper p{
+    color: darkgrey;
+}
+
+/* ----- PORFOLIO SECTION ----- */
 
 .project {
     padding: 1em 0;
 }
 
+/* ----- CONTACT / FOOTER ----- */
+
+footer {
+    border-top: 1px solid black;
+}
+
+.contact-wrapper{
+    padding: 1em 0;
+}
+
+.contact-wrapper p{
+    color: darkgray;
+}
+
+#contact {
+    background-color: #FAFAFA;
+}
+
+#contact-info {
+    font-family: 'Inter-Regular', sans-serif;
+    text-align: center;
+    padding: 1em 0; 
+    line-height: 2em;
+    color: darkgray;
+}
+
+#footer-name {
+    float: left;
+}
+
+#back-to-top {
+    float: right;
+    text-transform: uppercase;
+}
