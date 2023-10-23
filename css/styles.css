@@ -33,12 +33,12 @@ h1 {
 
 h2 {
     text-transform: uppercase;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3em;
 }
 
 h4 {
@@ -48,8 +48,9 @@ h4 {
 
 p {
     font-family: 'Inter', sans-serif;
-    margin: 0 2em;
+    margin: 0 0.5em;
     text-align: center;
+    font-size: 1em;
 }
 
 a {
@@ -58,7 +59,7 @@ a {
 }
 
 a:visited {
-    color: orange;
+    color: white;
 }
 
 strong {
@@ -82,43 +83,57 @@ img {
 
 }
 
+
 /* ----- HEADER/NAVIGATION ----- */
 
 .header-wrapper {
-    background-color: #FAFAFA;
+    background-image: linear-gradient(#A4C2D9 80%, white) ;
+
+
+    ;
 }
 
-header, .nav-container {
+header,
+.nav-container {
     display: flex;
     flex-direction: column;
 }
 
-.nav-container > h2 {
+.nav-container>h2 {
     padding: 0.8em 0;
-    margin: 0.5em 1em;
-    border: 1px solid orange;
+    margin: 0.1em 1em;
+    border: 1px solid black;
     border-radius: 10px;
-    background-color: white;
 }
 
 nav h2:hover {
-    background-color: papayawhip;
+    background-color: orange;
+    transition: 0.2s;
 }
 
 nav h2 {
     line-height: 0;
 }
 
+.header-wrapper p {
+    color: black;
+}
 
-#profile-picture {
-    margin: 3em auto;
-    padding: 0;
-    width: 80%;
+.persona-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
 
 }
 
-.header-wrapper p {
-    color: darkgrey;
+.persona {
+    margin: 1em 0;
+}
+
+#profile-picture {
+    width: 80%;
+
 }
 
 /* ----- PORFOLIO SECTION ----- */
@@ -141,6 +156,7 @@ nav h2 {
 #skills h2 {
     margin-top: 0;
 }
+
 #skills li {
     font-family: 'Inter';
 }
@@ -156,20 +172,21 @@ footer {
 }
 
 .contact-wrapper p {
-    color: darkgray;
+    color: black;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-around;
+    margin: 1em;
 }
 
-#footer-name{
-    align-items: flex-start;
+#footer-name {
+    margin-right: auto;
+
 }
 
-#contact {
-    background-color: #FAFAFA;
+.footer-wrapper {
+    background-image: linear-gradient(white, #A4C2D9) ;
 }
 
 #contact-info {
@@ -177,7 +194,7 @@ footer {
     text-align: center;
     padding: 1em 0;
     line-height: 2em;
-    color: darkgray;
+    color: black;
 }
 
 
@@ -204,59 +221,81 @@ footer {
 
 @media (min-width: 768px) {
 
+    p {
+        font-size: 1.1rem;
+    }
+
     .nav-container {
         flex-direction: row;
         justify-content: center;
     }
 
-    .nav-container > h2 {
+    .nav-container>h2 {
         padding: 1em;
 
     }
-    
-    .persona-container{
+
+    .persona-container {
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-start;
+        margin: 1em;
 
     }
 
     .persona-container p {
-        margin: auto 1em;
         text-align: left;
-
+        padding: 0 1em;
     }
 
-.project-container {
-    display: flex;
-    flex-wrap: wrap;
-}
+    #profile-picture {
+        width: 50%;
+    }
 
-.project{
- flex: 1 46%;
-}
+    .project-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .project {
+        flex: 1 45%;
+    }
 
 
     #contact-info {
         padding: 2em 4em;
     }
 
-    .skills-wrapper{
+    .skills-wrapper {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
+    }
+
+
+    #footer-name {
+        margin-right: auto;
     }
 
     #back-to-top {
         display: none;
     }
 
+
+
     .footer-nav {
-        display: inline;   
+        display: flex;
     }
 
-    .footer-nav a {
+    .footer-nav {
         text-transform: uppercase;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        margin: 1em;
+    }
+
+    .footer-nav:hover {
+        text-decoration: underline;
     }
 }
 
@@ -266,7 +305,12 @@ footer {
 
 @media (min-width: 1024px) {
 
-    header, .persona-container{
+    p {
+        font-size: 1.3rem;
+    }
+
+    header,
+    .persona-container {
         margin: 2%;
     }
 
@@ -276,21 +320,21 @@ footer {
     }
 
     #home {
-       justify-content: flex-start;
-       margin-right: auto;
+        justify-content: flex-start;
+        margin-right: auto;
     }
 
     .nav-container {
         justify-content: flex-end;
     }
 
-    .nav-container h2{
+    .nav-container h2 {
         margin: auto 1em;
         padding: 1em;
     }
 
-.project {
-    flex-basis: 30%;
-}
+    .project {
+        flex-basis: 30%;
+    }
 
 }
